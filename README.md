@@ -16,7 +16,7 @@ books, students, borrowing, returns and fines.
 | Screen | What it does |
 |---|---|
 | Sign in | Checks the username and password (passwords are stored as SHA-256 hashes) |
-| Dashboard | Totals, a **chart of loans per month** (each bar is drawn as a book spine) and the overdue list |
+| Dashboard | Totals, a **bar chart of loans per month** and the overdue list |
 | Books | Add / Update / Delete / Search. **Find online** fills the title, author and publisher from the ISBN |
 | Students, Librarians | Add / Update / Delete / Search |
 | Issue & return | Lend a book (max 3 per student, only books with a free copy). Returning late adds a fine automatically |
@@ -36,7 +36,7 @@ books, students, borrowing, returns and fines.
 | 7 | Exception handling | Every database call is inside `try/catch` and goes to `Helpers/ErrorHelper.cs`, which shows a clear message (for example "this student has loans, so it can't be deleted"). `Program.cs` catches anything left over |
 | 8 | Validation | `Helpers/Validation.cs` (name, email, phone, ISBN, amount) with an `ErrorProvider` red icon next to each wrong field. Rules such as "max 3 books" and "due date after issue date" are in `IssuePage` |
 | 9 | Search / filter | Search box on Books, Students, Librarians and Issue. Status filter on Issue and Fines. Date range on Reports |
-| 10 | GDI+ Graphics | `Helpers/SpineChart.cs`: the dashboard chart is drawn by hand in `OnPaint` with `Graphics.FillRectangle`, `DrawLine` and `DrawString` |
+| 10 | GDI+ Graphics | `Helpers/BarChart.cs`: the dashboard bar chart is drawn by hand in `OnPaint` with `Graphics.FillRectangle`, `DrawString` and `DrawLine` |
 | 11 | Async / multithreading | All database calls use `async`/`await`. The dashboard runs 7 queries **at the same time** with `Task.WhenAll`. CSV export writes the file on a **background thread** with `Task.Run` |
 | 12 | Networking | `Helpers/OpenLibrary.cs`: `HttpClient` downloads book details from the Open Library website using the ISBN |
 
@@ -54,6 +54,6 @@ Helpers/
   ErrorHelper.cs         friendly error messages
   LibraryRules.cs        14 days loan, 5 EGP per late day, max 3 books
   OpenLibrary.cs         online ISBN lookup (networking)
-  SpineChart.cs          the GDI+ chart
+  BarChart.cs            the GDI+ bar chart
   Theme.cs               colours and grid style
 ```

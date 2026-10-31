@@ -54,7 +54,7 @@
     <Compile Include="Helpers\ErrorHelper.cs" />
     <Compile Include="Helpers\LibraryRules.cs" />
     <Compile Include="Helpers\OpenLibrary.cs" />
-    <Compile Include="Helpers\SpineChart.cs">
+    <Compile Include="Helpers\BarChart.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Helpers\Theme.cs" />

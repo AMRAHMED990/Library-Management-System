@@ -1,6 +1,5 @@
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,8 +18,6 @@ namespace Library_Manegement_System
 
             try
             {
-                DateTime firstMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-5);
-
                 // all queries run at the same time, then we wait for all of them
                 Task<object> books = Db.GetValueAsync("SELECT COUNT(*) FROM books");
                 Task<object> students = Db.GetValueAsync("SELECT COUNT(*) FROM students");
@@ -29,10 +26,11 @@ namespace Library_Manegement_System
                     "SELECT COUNT(*) FROM issue WHERE Return_Date IS NULL AND Due_Date < CAST(GETDATE() AS date)");
                 Task<object> unpaidFines = Db.GetValueAsync("SELECT ISNULL(SUM(Amount), 0) FROM fine WHERE Paid = 0");
                 Task<DataTable> perMonth = Db.GetTableAsync(
-                    @"SELECT YEAR(Issue_Date) AS Y, MONTH(Issue_Date) AS M, COUNT(*) AS Total
-                      FROM issue WHERE Issue_Date >= @from
-                      GROUP BY YEAR(Issue_Date), MONTH(Issue_Date)",
-                    new SqlParameter("@from", firstMonth));
+                    @"SELECT LEFT(DATENAME(MONTH, Issue_Date), 3) AS Month, COUNT(*) AS Loans
+                      FROM issue
+                      WHERE Issue_Date >= DATEADD(MONTH, -6, GETDATE())
+                      GROUP BY YEAR(Issue_Date), MONTH(Issue_Date), DATENAME(MONTH, Issue_Date)
+                      ORDER BY YEAR(Issue_Date), MONTH(Issue_Date)");
                 Task<DataTable> overdueList = Db.GetTableAsync(
                     @"SELECT s.Student_Name AS Student, b.Book_Name AS Book,
                              DATEDIFF(DAY, i.Due_Date, GETDATE()) AS Days_Late
@@ -51,15 +49,14 @@ namespace Library_Manegement_System
                 lblFinesValue.Text = Convert.ToDecimal(unpaidFines.Result).ToString("N0") + " EGP";
                 dgvOverdue.DataSource = overdueList.Result;
 
-                // last 6 months, 0 if a month had no loans
-                string[] labels = new string[6];
-                int[] values = new int[6];
-                for (int i = 0; i < 6; i++)
+                // one bar per month: the month name under it, the number of loans as its height
+                DataTable months = perMonth.Result;
+                string[] labels = new string[months.Rows.Count];
+                int[] values = new int[months.Rows.Count];
+                for (int i = 0; i < months.Rows.Count; i++)
                 {
-                    DateTime month = firstMonth.AddMonths(i);
-                    labels[i] = month.ToString("MMM");
-                    DataRow[] rows = perMonth.Result.Select("Y = " + month.Year + " AND M = " + month.Month);
-                    values[i] = rows.Length > 0 ? Convert.ToInt32(rows[0]["Total"]) : 0;
+                    labels[i] = months.Rows[i]["Month"].ToString();
+                    values[i] = Convert.ToInt32(months.Rows[i]["Loans"]);
                 }
                 chartLoans.SetData(labels, values);
             }

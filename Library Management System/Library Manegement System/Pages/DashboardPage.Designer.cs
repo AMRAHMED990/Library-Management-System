@@ -29,41 +29,41 @@ namespace Library_Manegement_System
         private void InitializeComponent()
         {
             this.pnlBooks = new System.Windows.Forms.Panel();
-            this.pnlBooksSpine = new System.Windows.Forms.Panel();
+            this.pnlBooksColor = new System.Windows.Forms.Panel();
             this.lblBooksTitle = new System.Windows.Forms.Label();
             this.lblBooksValue = new System.Windows.Forms.Label();
             this.pnlStudents = new System.Windows.Forms.Panel();
-            this.pnlStudentsSpine = new System.Windows.Forms.Panel();
+            this.pnlStudentsColor = new System.Windows.Forms.Panel();
             this.lblStudentsTitle = new System.Windows.Forms.Label();
             this.lblStudentsValue = new System.Windows.Forms.Label();
             this.pnlOnLoan = new System.Windows.Forms.Panel();
-            this.pnlOnLoanSpine = new System.Windows.Forms.Panel();
+            this.pnlOnLoanColor = new System.Windows.Forms.Panel();
             this.lblOnLoanTitle = new System.Windows.Forms.Label();
             this.lblOnLoanValue = new System.Windows.Forms.Label();
             this.pnlOverdue = new System.Windows.Forms.Panel();
-            this.pnlOverdueSpine = new System.Windows.Forms.Panel();
+            this.pnlOverdueColor = new System.Windows.Forms.Panel();
             this.lblOverdueTitle = new System.Windows.Forms.Label();
             this.lblOverdueValue = new System.Windows.Forms.Label();
             this.pnlFines = new System.Windows.Forms.Panel();
-            this.pnlFinesSpine = new System.Windows.Forms.Panel();
+            this.pnlFinesColor = new System.Windows.Forms.Panel();
             this.lblFinesTitle = new System.Windows.Forms.Label();
             this.lblFinesValue = new System.Windows.Forms.Label();
             this.pnlChart = new System.Windows.Forms.Panel();
             this.lblChartTitle = new System.Windows.Forms.Label();
-            this.chartLoans = new Library_Manegement_System.SpineChart();
+            this.chartLoans = new Library_Manegement_System.BarChart();
             this.pnlOverdueList = new System.Windows.Forms.Panel();
             this.lblOverdueListTitle = new System.Windows.Forms.Label();
             this.dgvOverdue = new System.Windows.Forms.DataGridView();
             this.pnlBooks.SuspendLayout();
-            this.pnlBooksSpine.SuspendLayout();
+            this.pnlBooksColor.SuspendLayout();
             this.pnlStudents.SuspendLayout();
-            this.pnlStudentsSpine.SuspendLayout();
+            this.pnlStudentsColor.SuspendLayout();
             this.pnlOnLoan.SuspendLayout();
-            this.pnlOnLoanSpine.SuspendLayout();
+            this.pnlOnLoanColor.SuspendLayout();
             this.pnlOverdue.SuspendLayout();
-            this.pnlOverdueSpine.SuspendLayout();
+            this.pnlOverdueColor.SuspendLayout();
             this.pnlFines.SuspendLayout();
-            this.pnlFinesSpine.SuspendLayout();
+            this.pnlFinesColor.SuspendLayout();
             this.pnlChart.SuspendLayout();
             this.pnlOverdueList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOverdue)).BeginInit();
@@ -71,7 +71,7 @@ namespace Library_Manegement_System
             // 
             // pnlBooks
             // 
-            this.pnlBooks.Controls.Add(this.pnlBooksSpine);
+            this.pnlBooks.Controls.Add(this.pnlBooksColor);
             this.pnlBooks.Controls.Add(this.lblBooksTitle);
             this.pnlBooks.Controls.Add(this.lblBooksValue);
             this.pnlBooks.BackColor = System.Drawing.Color.White;
@@ -80,13 +80,13 @@ namespace Library_Manegement_System
             this.pnlBooks.Name = "pnlBooks";
             this.pnlBooks.TabIndex = 0;
             // 
-            // pnlBooksSpine
+            // pnlBooksColor
             // 
-            this.pnlBooksSpine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(59)))), ((int)(((byte)(51)))));
-            this.pnlBooksSpine.Location = new System.Drawing.Point(16, 16);
-            this.pnlBooksSpine.Size = new System.Drawing.Size(8, 68);
-            this.pnlBooksSpine.Name = "pnlBooksSpine";
-            this.pnlBooksSpine.TabIndex = 1;
+            this.pnlBooksColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(59)))), ((int)(((byte)(51)))));
+            this.pnlBooksColor.Location = new System.Drawing.Point(16, 16);
+            this.pnlBooksColor.Size = new System.Drawing.Size(8, 68);
+            this.pnlBooksColor.Name = "pnlBooksColor";
+            this.pnlBooksColor.TabIndex = 1;
             // 
             // lblBooksTitle
             // 
@@ -110,7 +110,7 @@ namespace Library_Manegement_System
             // 
             // pnlStudents
             // 
-            this.pnlStudents.Controls.Add(this.pnlStudentsSpine);
+            this.pnlStudents.Controls.Add(this.pnlStudentsColor);
             this.pnlStudents.Controls.Add(this.lblStudentsTitle);
             this.pnlStudents.Controls.Add(this.lblStudentsValue);
             this.pnlStudents.BackColor = System.Drawing.Color.White;
@@ -119,13 +119,13 @@ namespace Library_Manegement_System
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.TabIndex = 4;
             // 
-            // pnlStudentsSpine
+            // pnlStudentsColor
             // 
-            this.pnlStudentsSpine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(92)))), ((int)(((byte)(118)))));
-            this.pnlStudentsSpine.Location = new System.Drawing.Point(16, 16);
-            this.pnlStudentsSpine.Size = new System.Drawing.Size(8, 68);
-            this.pnlStudentsSpine.Name = "pnlStudentsSpine";
-            this.pnlStudentsSpine.TabIndex = 5;
+            this.pnlStudentsColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(92)))), ((int)(((byte)(118)))));
+            this.pnlStudentsColor.Location = new System.Drawing.Point(16, 16);
+            this.pnlStudentsColor.Size = new System.Drawing.Size(8, 68);
+            this.pnlStudentsColor.Name = "pnlStudentsColor";
+            this.pnlStudentsColor.TabIndex = 5;
             // 
             // lblStudentsTitle
             // 
@@ -149,7 +149,7 @@ namespace Library_Manegement_System
             // 
             // pnlOnLoan
             // 
-            this.pnlOnLoan.Controls.Add(this.pnlOnLoanSpine);
+            this.pnlOnLoan.Controls.Add(this.pnlOnLoanColor);
             this.pnlOnLoan.Controls.Add(this.lblOnLoanTitle);
             this.pnlOnLoan.Controls.Add(this.lblOnLoanValue);
             this.pnlOnLoan.BackColor = System.Drawing.Color.White;
@@ -158,13 +158,13 @@ namespace Library_Manegement_System
             this.pnlOnLoan.Name = "pnlOnLoan";
             this.pnlOnLoan.TabIndex = 8;
             // 
-            // pnlOnLoanSpine
+            // pnlOnLoanColor
             // 
-            this.pnlOnLoanSpine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(151)))), ((int)(((byte)(63)))));
-            this.pnlOnLoanSpine.Location = new System.Drawing.Point(16, 16);
-            this.pnlOnLoanSpine.Size = new System.Drawing.Size(8, 68);
-            this.pnlOnLoanSpine.Name = "pnlOnLoanSpine";
-            this.pnlOnLoanSpine.TabIndex = 9;
+            this.pnlOnLoanColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(151)))), ((int)(((byte)(63)))));
+            this.pnlOnLoanColor.Location = new System.Drawing.Point(16, 16);
+            this.pnlOnLoanColor.Size = new System.Drawing.Size(8, 68);
+            this.pnlOnLoanColor.Name = "pnlOnLoanColor";
+            this.pnlOnLoanColor.TabIndex = 9;
             // 
             // lblOnLoanTitle
             // 
@@ -188,7 +188,7 @@ namespace Library_Manegement_System
             // 
             // pnlOverdue
             // 
-            this.pnlOverdue.Controls.Add(this.pnlOverdueSpine);
+            this.pnlOverdue.Controls.Add(this.pnlOverdueColor);
             this.pnlOverdue.Controls.Add(this.lblOverdueTitle);
             this.pnlOverdue.Controls.Add(this.lblOverdueValue);
             this.pnlOverdue.BackColor = System.Drawing.Color.White;
@@ -197,13 +197,13 @@ namespace Library_Manegement_System
             this.pnlOverdue.Name = "pnlOverdue";
             this.pnlOverdue.TabIndex = 12;
             // 
-            // pnlOverdueSpine
+            // pnlOverdueColor
             // 
-            this.pnlOverdueSpine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(56)))), ((int)(((byte)(75)))));
-            this.pnlOverdueSpine.Location = new System.Drawing.Point(16, 16);
-            this.pnlOverdueSpine.Size = new System.Drawing.Size(8, 68);
-            this.pnlOverdueSpine.Name = "pnlOverdueSpine";
-            this.pnlOverdueSpine.TabIndex = 13;
+            this.pnlOverdueColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(56)))), ((int)(((byte)(75)))));
+            this.pnlOverdueColor.Location = new System.Drawing.Point(16, 16);
+            this.pnlOverdueColor.Size = new System.Drawing.Size(8, 68);
+            this.pnlOverdueColor.Name = "pnlOverdueColor";
+            this.pnlOverdueColor.TabIndex = 13;
             // 
             // lblOverdueTitle
             // 
@@ -227,7 +227,7 @@ namespace Library_Manegement_System
             // 
             // pnlFines
             // 
-            this.pnlFines.Controls.Add(this.pnlFinesSpine);
+            this.pnlFines.Controls.Add(this.pnlFinesColor);
             this.pnlFines.Controls.Add(this.lblFinesTitle);
             this.pnlFines.Controls.Add(this.lblFinesValue);
             this.pnlFines.BackColor = System.Drawing.Color.White;
@@ -236,13 +236,13 @@ namespace Library_Manegement_System
             this.pnlFines.Name = "pnlFines";
             this.pnlFines.TabIndex = 16;
             // 
-            // pnlFinesSpine
+            // pnlFinesColor
             // 
-            this.pnlFinesSpine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(151)))), ((int)(((byte)(63)))));
-            this.pnlFinesSpine.Location = new System.Drawing.Point(16, 16);
-            this.pnlFinesSpine.Size = new System.Drawing.Size(8, 68);
-            this.pnlFinesSpine.Name = "pnlFinesSpine";
-            this.pnlFinesSpine.TabIndex = 17;
+            this.pnlFinesColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(151)))), ((int)(((byte)(63)))));
+            this.pnlFinesColor.Location = new System.Drawing.Point(16, 16);
+            this.pnlFinesColor.Size = new System.Drawing.Size(8, 68);
+            this.pnlFinesColor.Name = "pnlFinesColor";
+            this.pnlFinesColor.TabIndex = 17;
             // 
             // lblFinesTitle
             // 
@@ -341,24 +341,24 @@ namespace Library_Manegement_System
             this.Load += new System.EventHandler(this.DashboardPage_Load);
             this.pnlBooks.ResumeLayout(false);
             this.pnlBooks.PerformLayout();
-            this.pnlBooksSpine.ResumeLayout(false);
-            this.pnlBooksSpine.PerformLayout();
+            this.pnlBooksColor.ResumeLayout(false);
+            this.pnlBooksColor.PerformLayout();
             this.pnlStudents.ResumeLayout(false);
             this.pnlStudents.PerformLayout();
-            this.pnlStudentsSpine.ResumeLayout(false);
-            this.pnlStudentsSpine.PerformLayout();
+            this.pnlStudentsColor.ResumeLayout(false);
+            this.pnlStudentsColor.PerformLayout();
             this.pnlOnLoan.ResumeLayout(false);
             this.pnlOnLoan.PerformLayout();
-            this.pnlOnLoanSpine.ResumeLayout(false);
-            this.pnlOnLoanSpine.PerformLayout();
+            this.pnlOnLoanColor.ResumeLayout(false);
+            this.pnlOnLoanColor.PerformLayout();
             this.pnlOverdue.ResumeLayout(false);
             this.pnlOverdue.PerformLayout();
-            this.pnlOverdueSpine.ResumeLayout(false);
-            this.pnlOverdueSpine.PerformLayout();
+            this.pnlOverdueColor.ResumeLayout(false);
+            this.pnlOverdueColor.PerformLayout();
             this.pnlFines.ResumeLayout(false);
             this.pnlFines.PerformLayout();
-            this.pnlFinesSpine.ResumeLayout(false);
-            this.pnlFinesSpine.PerformLayout();
+            this.pnlFinesColor.ResumeLayout(false);
+            this.pnlFinesColor.PerformLayout();
             this.pnlChart.ResumeLayout(false);
             this.pnlChart.PerformLayout();
             this.pnlOverdueList.ResumeLayout(false);
@@ -372,28 +372,28 @@ namespace Library_Manegement_System
         #endregion
 
         private System.Windows.Forms.Panel pnlBooks;
-        private System.Windows.Forms.Panel pnlBooksSpine;
+        private System.Windows.Forms.Panel pnlBooksColor;
         private System.Windows.Forms.Label lblBooksTitle;
         private System.Windows.Forms.Label lblBooksValue;
         private System.Windows.Forms.Panel pnlStudents;
-        private System.Windows.Forms.Panel pnlStudentsSpine;
+        private System.Windows.Forms.Panel pnlStudentsColor;
         private System.Windows.Forms.Label lblStudentsTitle;
         private System.Windows.Forms.Label lblStudentsValue;
         private System.Windows.Forms.Panel pnlOnLoan;
-        private System.Windows.Forms.Panel pnlOnLoanSpine;
+        private System.Windows.Forms.Panel pnlOnLoanColor;
         private System.Windows.Forms.Label lblOnLoanTitle;
         private System.Windows.Forms.Label lblOnLoanValue;
         private System.Windows.Forms.Panel pnlOverdue;
-        private System.Windows.Forms.Panel pnlOverdueSpine;
+        private System.Windows.Forms.Panel pnlOverdueColor;
         private System.Windows.Forms.Label lblOverdueTitle;
         private System.Windows.Forms.Label lblOverdueValue;
         private System.Windows.Forms.Panel pnlFines;
-        private System.Windows.Forms.Panel pnlFinesSpine;
+        private System.Windows.Forms.Panel pnlFinesColor;
         private System.Windows.Forms.Label lblFinesTitle;
         private System.Windows.Forms.Label lblFinesValue;
         private System.Windows.Forms.Panel pnlChart;
         private System.Windows.Forms.Label lblChartTitle;
-        private Library_Manegement_System.SpineChart chartLoans;
+        private Library_Manegement_System.BarChart chartLoans;
         private System.Windows.Forms.Panel pnlOverdueList;
         private System.Windows.Forms.Label lblOverdueListTitle;
         private System.Windows.Forms.DataGridView dgvOverdue;
